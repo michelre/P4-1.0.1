@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8"/>
+  <link rel="stylesheet" href="../public/css/style.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>BILLET SIMPLE POUR L'ALASKA</title>
+</head>
+<body>
+
+<?php include("header.php"); ?>
+
+<section id="fond">
+  <div class="image-du-blog">
+    <img src="/public/image/fond.jpg" alt="aurore boreal en alaska"></div>
+</section>
+<section>
+  <div class="intro-perso">
+    <h2> Qui suis-je?</h2>
+    <p>Bien le bonjour à vous qui me lisez, je me présente je m'apelle Jean Forteroche.
+      Je suis écrivain depuis toujours je dirais.
+      Sur mon site vous trouverez directement mon livre pas à pas, épisode par épisode. Comme vous avez déjà du le voir
+      mon nouveau roman s'appelera "Un billet pour l'Alaska".
+      Vous pourrez accéder directement a chaque épisode de ce roman soit par la barre de navigation en haut de mon site
+      , soit juste en dessous de ma présentation.</p>
+  </div>
+</section>
+<h2>Les Épisodes du roman "Un billet pour l'Alaska"</h2>
+<section class="tableau-Episode">
+
+    <?php foreach ($articles as $article)  ?>
+      <div class="Image-Ep-1">
+        <img src="/public/image/Image-Ep-1.jpeg" alt="aurore boreal en alaska">
+        <div class="text">
+          <h3><?php echo $article->getTitle() ?></h3>
+          <p>
+              <?php echo $article->getContent() ?>
+          </p>
+        </div>
+      </div>
+	  <?php foreach ($articles as $article) ?>
+      <div class="Image-Ep-2">
+        <img src="/public/image/Image-Ep-2.jpeg" alt="aurore boreal en alaska">
+        <div class="text">
+          <h3><?php echo $article->getTitle() ?></h3>
+          <p>
+              <?php echo $article->getContent() ?>
+          </p>
+        </div>
+      </div>
+		  <?php foreach ($articles as $article) ?>
+      <div class="Image-Ep-3">
+        <img src="/public/image/Image-Ep-3.jpeg" alt="aurore boreal en alaska">
+        <div class="text">
+          <h3><?php echo $article->getTitle() ?></h3>
+          <p>
+              <?php echo $article->getContent() ?>
+          </p>
+        </div>
+      </div>
+</section>
+
+<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+<?php include("footer.php"); ?>
+	
+</body>
+
+
+</html>
