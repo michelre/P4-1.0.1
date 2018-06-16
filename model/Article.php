@@ -5,22 +5,8 @@ class Article
     private $id;
     private $title;
     private $content;
-    private $creationDate;
+    private $date_creation;
 
-    /**
-     * Article constructor.
-     * @param $id
-     * @param $title
-     * @param $content
-     * @param $creationDate
-     */
-    public function __construct($id, $title, $content, $creationDate)
-    {
-        $this->id = $id;
-        $this->title = $title;
-        $this->content = $content;
-        $this->creationDate = $creationDate;
-    }
 
     /**
      * @return mixed
@@ -73,20 +59,18 @@ class Article
     /**
      * @return mixed
      */
-    public function getCreationDate()
+    public function getDateCreation()
     {
-        return $this->creationDate;
+        return $this->dateCreation;
     }
 
     /**
-     * @param mixed $creationDate
+     * @param mixed $dateCreation
      */
-    public function setCreationDate($creationDate)
+    public function setDateCreation($dateCreation)
     {
-        $this->creationDate = $creationDate;
+        $this->dateCreation = $dateCreation;
     }
-
-
 
 
 }

@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<?php include("header.php"); ?>
+<?php include("templates/header.php"); ?>
 
 <section id="fond">
   <div class="image-du-blog">
@@ -28,42 +28,27 @@
 <h2>Les Épisodes du roman "Un billet pour l'Alaska"</h2>
 <section class="tableau-Episode">
 
-    <?php foreach ($articles as $article)  ?>
+    <?php foreach ($articles as $article) { ?>
       <div class="Image-Ep-1">
         <img src="/public/image/Image-Ep-1.jpeg" alt="aurore boreal en alaska">
         <div class="text">
-          <h3><?php echo $article->getTitle() ?></h3>
+          <h3>
+            <a href="?action=detailArticle&articleId=<?php echo $article->getId(); ?>">
+                <?php echo $article->getTitle() ?>
+            </a>
+          </h3>
           <p>
               <?php echo $article->getContent() ?>
           </p>
         </div>
       </div>
-	  <?php foreach ($articles as $article) ?>
-      <div class="Image-Ep-2">
-        <img src="/public/image/Image-Ep-2.jpeg" alt="aurore boreal en alaska">
-        <div class="text">
-          <h3><?php echo $article->getTitle() ?></h3>
-          <p>
-              <?php echo $article->getContent() ?>
-          </p>
-        </div>
-      </div>
-		  <?php foreach ($articles as $article) ?>
-      <div class="Image-Ep-3">
-        <img src="/public/image/Image-Ep-3.jpeg" alt="aurore boreal en alaska">
-        <div class="text">
-          <h3><?php echo $article->getTitle() ?></h3>
-          <p>
-              <?php echo $article->getContent() ?>
-          </p>
-        </div>
-      </div>
+	  <?php } ?>
 </section>
 
 <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 
-<?php include("footer.php"); ?>
-	
+<?php include("templates/footer.php"); ?>
+
 </body>
 
 

@@ -27,10 +27,12 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE IF NOT EXISTS `commentaires` (
-  `#ID` int(15) DEFAULT NULL,
-  `AUTEUR` int(15) DEFAULT NULL,
-  `COMMENTAIRE` int(15) DEFAULT NULL,
-  `DATE_CREATION` int(15) DEFAULT NULL
+  `id` int(15) AUTO_INCREMENT PRIMARY KEY,
+  `author` int(15) DEFAULT NULL,
+  `comment` int(15) DEFAULT NULL,
+  `date_creation` int(15) DEFAULT NULL,
+  `article_id` int(15),
+  FOREIGN KEY (article_id) REFERENCES article(id)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

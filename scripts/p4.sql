@@ -26,11 +26,11 @@ SET time_zone = "+00:00";
 -- Structure de la table `p4`
 --
 
-CREATE TABLE IF NOT EXISTS `p4` (
-  `#ID` int(15) DEFAULT NULL,
-  `TITRE` varchar(15) DEFAULT NULL,
-  `CONTENU` text,
-  `DATE_CREATION` date DEFAULT NULL
+CREATE TABLE IF NOT EXISTS `article` (
+  `id` int(15) AUTO_INCREMENT PRIMARY KEY,
+  `title` varchar(15) DEFAULT NULL,
+  `content` text,
+  `date_creation` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
